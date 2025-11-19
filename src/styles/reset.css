@@ -1,0 +1,236 @@
+/* Modern CSS reset tailored for broad browser support */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Urbanist', sans-serif;
+}
+
+html {
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    line-height: 1.5;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+main {
+    display: block;
+}
+
+hr {
+    height: 0;
+    color: inherit;
+    border: 0;
+    border-top: 1px solid;
+}
+
+abbr[title] {
+    text-decoration: underline dotted;
+}
+
+a {
+    background-color: transparent;
+    text-decoration: none;
+    color: inherit;
+}
+
+b,
+strong {
+    font-weight: bolder;
+}
+
+code,
+kbd,
+samp,
+pre {
+    font-family: ui-monospace, SFMono-Regular, SFMono, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 1em;
+}
+
+small {
+    font-size: 80%;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+    display: block;
+    max-width: 100%;
+}
+
+img,
+picture,
+video {
+    height: auto;
+}
+
+audio:not([controls]) {
+    display: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+    color: inherit;
+}
+
+button,
+[role="button"] {
+    cursor: pointer;
+}
+
+button:disabled,
+[role="button"][aria-disabled="true"],
+[disabled] {
+    cursor: not-allowed;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    border: 0;
+    background: transparent;
+    color: inherit;
+    outline: none;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 4rem;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+legend {
+    padding: 0;
+}
+
+::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+:-moz-focusring {
+    outline: 1px dotted ButtonText;
+}
+
+:-moz-ui-invalid {
+    box-shadow: none;
+}
+
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+    height: auto;
+}
+
+::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+    -webkit-appearance: button;
+    font: inherit;
+}
+
+::-webkit-calendar-picker-indicator {
+    filter: invert(0);
+}
+
+::placeholder {
+    color: inherit;
+    opacity: 0.64;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+caption {
+    text-align: left;
+    caption-side: bottom;
+}
+
+ol,
+ul,
+menu {
+    list-style: none;
+}
+
+dialog {
+    padding: 0;
+    border: 0;
+}
+
+canvas,
+iframe {
+    border: 0;
+}
+
+progress {
+    vertical-align: baseline;
+}
+
+summary {
+    cursor: pointer;
+}
+
+::-webkit-details-marker {
+    display: none;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

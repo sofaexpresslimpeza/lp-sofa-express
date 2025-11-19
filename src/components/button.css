@@ -1,0 +1,35 @@
+button {
+    border: none;
+    padding: 10px 10px 10px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 999px;
+
+    @media (max-width: 768px) {
+        padding: 8px 8px 8px 16px;
+        font-size: 20px;
+        gap: 12px;            
+    }
+
+    & > div {
+        width: 42px;
+        height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+    }
+}
+
+.button-blue {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+
+    & > div {
+        background-color: var(--color-white);
+    }
+}

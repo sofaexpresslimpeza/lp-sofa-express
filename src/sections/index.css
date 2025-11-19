@@ -1,0 +1,10 @@
+@import url(./hero.css);
+
+.alignment-section-helper {
+    transform: translateX(-50%);
+    max-width: 1440px;
+    padding: 0 2.5%;
+    position: relative;
+    left: 50%;
+    top: 0;
+}
