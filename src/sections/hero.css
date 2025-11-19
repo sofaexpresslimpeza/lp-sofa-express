@@ -7,7 +7,7 @@
 
     @media (max-width: 768px) {
         flex-direction: column-reverse;
-        gap: 24px;    
+        gap: 36px;    
     }
 
     & .hero-header.mobile {
@@ -22,6 +22,10 @@
         align-items: flex-start;
         justify-content: center;
         gap: 82px;
+        
+        @media (max-width: 768px) {
+            padding: 0 2.5%;    
+        }
 
         & .content {
             display: flex;
@@ -42,8 +46,8 @@
                 gap: 18px;
 
                 @media (max-width: 768px) {
-                    gap: 12px;
-                    align-items: flex-start;
+                    gap: 16px;
+                    align-items: center;
                 }
 
                 & > div {
@@ -118,7 +122,7 @@
         padding-top: 16px;
 
         @media (max-width: 768px) {
-            padding-top: 12px;
+            padding: 18px 2.5%;
         }
 
         & > img {
@@ -126,7 +130,7 @@
             width: auto;
 
             @media (max-width: 768px) {
-                height: 56px;
+                height: 46px;
             }
         }
 
@@ -195,7 +199,7 @@
             position: absolute;
             top: 0;
             right: 0;
-            background: var(--color-primary);
+            background: url('../assets/pattern/bg-hero.png') no-repeat center;
             z-index: -1;
             border-radius: 112px 0 112px 112px;
 
