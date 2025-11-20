@@ -108,7 +108,7 @@ if (servicesCarousel && window.Swiper) {
         breakpoints: {
             1024: {
                 slidesPerView: 4,
-                spaceBetween: 24,
+                spaceBetween: 32,
             },
         },
     });
