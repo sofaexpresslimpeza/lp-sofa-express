@@ -1,12 +1,13 @@
 @import url(./hero.css);
 @import url(./process.css);
 @import url(./offer.css);
+@import url(./about.css);
 
 .alignment-section-helper {
-    transform: translateX(-50%);
     max-width: 1440px;
     padding: 0 2.5%;
     position: relative;
     left: 50%;
+    transform: translateX(-50%);
     top: 0;
 }
