@@ -2,6 +2,7 @@
 @import url(./process.css);
 @import url(./offer.css);
 @import url(./about.css);
+@import url(./services.css);
 
 .alignment-section-helper {
     max-width: 1440px;

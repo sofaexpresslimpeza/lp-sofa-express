@@ -54,3 +54,26 @@ button {
         } 
     }
 }
+
+.button-black {
+    background-color: var(--color-black);
+    color: var(--color-white);
+
+    & > div {
+        background-color: var(--color-white);
+
+        & > svg {
+            fill: var(--color-black);
+        } 
+    }
+}
+
+.mini {
+    padding: 8px 8px 8px 16px;
+    font-size: 16px;
+
+    & > div {
+        width: 32px;
+        height: 32px;
+    }
+}

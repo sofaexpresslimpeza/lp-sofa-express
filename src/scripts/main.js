@@ -92,3 +92,24 @@ if (aboutQualitiesCarousel && window.Swiper) {
         mobileAutoplayQuery.addListener(toggleAboutQualitiesAutoplay);
     }
 }
+
+const servicesCarousel = document.querySelector('.services-swiper');
+
+if (servicesCarousel && window.Swiper) {
+    new Swiper(servicesCarousel, {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        loop: false,
+        allowTouchMove: true,
+        navigation: {
+            nextEl: '.services-button-next',
+            prevEl: '.services-button-prev',
+        },
+        breakpoints: {
+            1024: {
+                slidesPerView: 4,
+                spaceBetween: 24,
+            },
+        },
+    });
+}
