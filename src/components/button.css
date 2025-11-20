@@ -22,6 +22,10 @@ button {
         align-items: center;
         justify-content: center;
         border-radius: 999px;
+
+        & > svg {
+            fill: var(--color-black);
+        }
     }
 }
 
@@ -31,5 +35,22 @@ button {
 
     & > div {
         background-color: var(--color-white);
+
+        & > svg {
+            fill: var(--color-primary);
+        }
+    }
+}
+
+.button-white {
+    background-color: var(--color-white);
+    color: var(--color-primary);
+
+    & > div {
+        background-color: var(--color-primary);
+
+        & > svg {
+            fill: var(--color-white);
+        } 
     }
 }
