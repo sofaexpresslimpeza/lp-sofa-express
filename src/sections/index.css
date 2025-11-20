@@ -4,6 +4,7 @@
 @import url(./about.css);
 @import url(./services.css);
 @import url(./automotive.css);
+@import url(./promo.css);
 
 .alignment-section-helper {
     max-width: 1440px;
