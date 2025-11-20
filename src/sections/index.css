@@ -3,8 +3,10 @@
 @import url(./offer.css);
 @import url(./about.css);
 @import url(./services.css);
+@import url(./testimonials.css);
 @import url(./automotive.css);
 @import url(./promo.css);
+@import url(./footer.css);
 
 .alignment-section-helper {
     max-width: 1440px;

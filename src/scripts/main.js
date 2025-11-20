@@ -113,3 +113,45 @@ if (servicesCarousel && window.Swiper) {
         },
     });
 }
+
+const testimonialsCarousel = document.querySelector('.testimonials-swiper');
+
+if (testimonialsCarousel && window.Swiper) {
+    const testimonialsSwiper = new Swiper(testimonialsCarousel, {
+        slidesPerView: 1,
+        spaceBetween: 16,
+        loop: true,
+        allowTouchMove: true,
+        autoplay: {
+            enabled: false,
+            delay: 4000,
+            disableOnInteraction: false,
+        },
+        navigation: {
+            nextEl: '.testimonials-button-next',
+            prevEl: '.testimonials-button-prev',
+        },
+    });
+
+    const testimonialsMobileQuery = window.matchMedia('(max-width: 768px)');
+
+    const toggleTestimonialsAutoplay = () => {
+        if (!testimonialsSwiper.autoplay) {
+            return;
+        }
+
+        if (testimonialsMobileQuery.matches) {
+            testimonialsSwiper.autoplay.start();
+        } else {
+            testimonialsSwiper.autoplay.stop();
+        }
+    };
+
+    toggleTestimonialsAutoplay();
+
+    if (typeof testimonialsMobileQuery.addEventListener === 'function') {
+        testimonialsMobileQuery.addEventListener('change', toggleTestimonialsAutoplay);
+    } else if (typeof testimonialsMobileQuery.addListener === 'function') {
+        testimonialsMobileQuery.addListener(toggleTestimonialsAutoplay);
+    }
+}
