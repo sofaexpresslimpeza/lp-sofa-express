@@ -264,3 +264,47 @@ if (promotionBanner) {
         }
     });
 }
+
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenuButton = document.querySelector('.button-menu');
+const mobileMenuClose = document.querySelector('.mobile-menu-close');
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu-nav a');
+
+const openMobileMenu = () => {
+    if (mobileMenu) {
+        mobileMenu.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+    }
+};
+
+const closeMobileMenu = () => {
+    if (mobileMenu) {
+        mobileMenu.classList.remove('is-open');
+        document.body.style.overflow = '';
+    }
+};
+
+if (mobileMenuButton) {
+    mobileMenuButton.addEventListener('click', openMobileMenu);
+}
+
+if (mobileMenuClose) {
+    mobileMenuClose.addEventListener('click', closeMobileMenu);
+}
+
+if (mobileMenuLinks.length > 0) {
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            closeMobileMenu();
+        });
+    });
+}
+
+if (mobileMenu) {
+    mobileMenu.addEventListener('click', (e) => {
+        if (e.target === mobileMenu) {
+            closeMobileMenu();
+        }
+    });
+}
+
