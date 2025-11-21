@@ -9,10 +9,9 @@
 @import url(./footer.css);
 
 .alignment-section-helper {
+    width: 100%;
     max-width: 1440px;
+    margin: 0 auto;
     padding: 0 2.5%;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 0;
 }

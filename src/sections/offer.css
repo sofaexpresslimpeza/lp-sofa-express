@@ -1,6 +1,6 @@
 .offer {
-    padding: 12px!important;
-    width: 90%!important;
+    padding: 12px !important;
+    width: 90% !important;
     border-radius: 36px;
     display: flex;
     align-items: center;
@@ -8,7 +8,7 @@
     flex-direction: row;
     gap: 22px;
     background: linear-gradient(90deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
-    
+
     @media (max-width: 768px) {
         flex-direction: column-reverse;
         border-radius: 32px;
@@ -64,9 +64,9 @@
             z-index: -1;
             border-radius: 26px;
             background-color: var(--color-background-white);
-            
+
             @media (max-width: 768px) {
-                left: 0;    
+                left: 0;
                 width: 60%;
             }
         }
@@ -78,6 +78,8 @@
             object-position: left;
             position: absolute;
             left: 20px;
+            filter: drop-shadow(0 0 0 transparent);
+            animation: sofa-shine 4s ease-in-out infinite;
 
             @media (max-width: 768px) {
                 left: auto;
@@ -86,5 +88,17 @@
                 height: 220px;
             }
         }
+    }
+}
+
+@keyframes sofa-shine {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 0 transparent);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.4));
     }
 }

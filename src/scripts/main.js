@@ -1,3 +1,24 @@
+const initAOSAnimations = () => {
+    if (window.AOS) {
+        AOS.init({
+            duration: 700,
+            easing: 'ease-out-quart',
+            offset: 80,
+            once: false,
+            mirror: false,
+        });
+    }
+};
+
+const refreshAOSAnimations = () => {
+    if (window.AOS) {
+        AOS.refresh();
+    }
+};
+
+initAOSAnimations();
+window.addEventListener('load', refreshAOSAnimations);
+
 const processCarousel = document.querySelector('.process-swiper');
 
 if (processCarousel && window.Swiper) {
@@ -32,22 +53,59 @@ if (processCarousel && window.Swiper) {
     };
 
     updateDesktopState();
-    window.addEventListener('resize', updateDesktopState);
+    window.addEventListener('resize', () => {
+        updateDesktopState();
+        refreshAOSAnimations();
+    });
+
+    processSwiper.on('slideChangeTransitionEnd', refreshAOSAnimations);
+    refreshAOSAnimations();
+
+    const processCards = Array.from(document.querySelectorAll('.process-card'));
+    const observedCards = new Set();
+
+    const activateProgressAnimation = (card) => {
+        if (observedCards.has(card)) return;
+        observedCards.add(card);
+        card.classList.add('is-progress-visible');
+    };
+
+    if ('IntersectionObserver' in window) {
+        const progressObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && entry.intersectionRatio >= 0.3) {
+                    activateProgressAnimation(entry.target);
+                    progressObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        processCards.forEach(card => progressObserver.observe(card));
+    } else {
+        processCards.forEach(card => activateProgressAnimation(card));
+    }
 }
 
 const aboutCarousel = document.querySelector('.about-swiper');
 
 if (aboutCarousel && window.Swiper) {
-    new Swiper(aboutCarousel, {
+    const aboutSwiper = new Swiper(aboutCarousel, {
         slidesPerView: 1,
         spaceBetween: 0,
-        loop: false,
+        loop: true,
         allowTouchMove: true,
+        autoplay: {
+            delay: 4500,
+            disableOnInteraction: false,
+        },
         navigation: {
             nextEl: '.about-button-next',
             prevEl: '.about-button-prev',
         },
     });
+
+    aboutSwiper.on('slideChangeTransitionEnd', refreshAOSAnimations);
+    refreshAOSAnimations();
 }
 
 const aboutQualitiesCarousel = document.querySelector('.about-qualities-swiper');
@@ -71,6 +129,8 @@ if (aboutQualitiesCarousel && window.Swiper) {
         },
     });
 
+    aboutQualitiesSwiper.on('slideChangeTransitionEnd', refreshAOSAnimations);
+
     const mobileAutoplayQuery = window.matchMedia('(max-width: 768px)');
 
     const toggleAboutQualitiesAutoplay = () => {
@@ -87,16 +147,23 @@ if (aboutQualitiesCarousel && window.Swiper) {
 
     toggleAboutQualitiesAutoplay();
     if (typeof mobileAutoplayQuery.addEventListener === 'function') {
-        mobileAutoplayQuery.addEventListener('change', toggleAboutQualitiesAutoplay);
+        mobileAutoplayQuery.addEventListener('change', () => {
+            toggleAboutQualitiesAutoplay();
+            refreshAOSAnimations();
+        });
     } else if (typeof mobileAutoplayQuery.addListener === 'function') {
-        mobileAutoplayQuery.addListener(toggleAboutQualitiesAutoplay);
+        mobileAutoplayQuery.addListener(() => {
+            toggleAboutQualitiesAutoplay();
+            refreshAOSAnimations();
+        });
     }
+    refreshAOSAnimations();
 }
 
 const servicesCarousel = document.querySelector('.services-swiper');
 
 if (servicesCarousel && window.Swiper) {
-    new Swiper(servicesCarousel, {
+    const servicesSwiper = new Swiper(servicesCarousel, {
         slidesPerView: 1,
         spaceBetween: 16,
         loop: false,
@@ -112,6 +179,9 @@ if (servicesCarousel && window.Swiper) {
             },
         },
     });
+
+    servicesSwiper.on('slideChangeTransitionEnd', refreshAOSAnimations);
+    refreshAOSAnimations();
 }
 
 const testimonialsCarousel = document.querySelector('.testimonials-swiper');
@@ -150,8 +220,47 @@ if (testimonialsCarousel && window.Swiper) {
     toggleTestimonialsAutoplay();
 
     if (typeof testimonialsMobileQuery.addEventListener === 'function') {
-        testimonialsMobileQuery.addEventListener('change', toggleTestimonialsAutoplay);
+        testimonialsMobileQuery.addEventListener('change', () => {
+            toggleTestimonialsAutoplay();
+            refreshAOSAnimations();
+        });
     } else if (typeof testimonialsMobileQuery.addListener === 'function') {
-        testimonialsMobileQuery.addListener(toggleTestimonialsAutoplay);
+        testimonialsMobileQuery.addListener(() => {
+            toggleTestimonialsAutoplay();
+            refreshAOSAnimations();
+        });
     }
+
+    testimonialsSwiper.on('slideChangeTransitionEnd', refreshAOSAnimations);
+    refreshAOSAnimations();
+}
+
+const promotionBanner = document.querySelector('.promotion');
+
+if (promotionBanner) {
+    const promotionTitle = promotionBanner.querySelector('.promotion-title');
+    const promotionDescription = promotionBanner.querySelector('.promotion-description');
+    const unlockPrize = () => {
+        if (!promotionTitle || !promotionDescription) {
+            return;
+        }
+
+        if (promotionBanner.dataset.unlocked === 'true') {
+            return;
+        }
+
+        promotionBanner.dataset.unlocked = 'true';
+        promotionBanner.classList.add('is-unlocked');
+        promotionBanner.setAttribute('aria-pressed', 'true');
+        promotionTitle.textContent = 'Parabéns, você ganhou!';
+        promotionDescription.textContent = '1x lavagem grátis de almofada';
+    };
+
+    promotionBanner.addEventListener('click', unlockPrize);
+    promotionBanner.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+            event.preventDefault();
+            unlockPrize();
+        }
+    });
 }

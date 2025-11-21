@@ -109,20 +109,70 @@
     }
 }
 
-.process-card:nth-child(1) .process-card-reference::before {
-    --progress: 0.25turn;
+.process-card .process-card-reference::before {
+    --progress: 0turn;
 }
 
-.process-card:nth-child(2) .process-card-reference::before {
-    --progress: 0.5turn;
+.process-card:nth-child(1).is-progress-visible .process-card-reference::before {
+    animation: processProgress1 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.process-card:nth-child(3) .process-card-reference::before {
-    --progress: 0.75turn;
+.process-card:nth-child(2).is-progress-visible .process-card-reference::before {
+    animation: processProgress2 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
-.process-card:nth-child(4) .process-card-reference::before {
-    --progress: 1turn;
+.process-card:nth-child(3).is-progress-visible .process-card-reference::before {
+    animation: processProgress3 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.process-card:nth-child(4).is-progress-visible .process-card-reference::before {
+    animation: processProgress4 2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@property --progress {
+    syntax: '<angle>';
+    inherits: false;
+    initial-value: 0turn;
+}
+
+@keyframes processProgress1 {
+    0% {
+        --progress: 0turn;
+    }
+
+    100% {
+        --progress: 0.25turn;
+    }
+}
+
+@keyframes processProgress2 {
+    0% {
+        --progress: 0turn;
+    }
+
+    100% {
+        --progress: 0.5turn;
+    }
+}
+
+@keyframes processProgress3 {
+    0% {
+        --progress: 0turn;
+    }
+
+    100% {
+        --progress: 0.75turn;
+    }
+}
+
+@keyframes processProgress4 {
+    0% {
+        --progress: 0turn;
+    }
+
+    100% {
+        --progress: 1turn;
+    }
 }
 
 

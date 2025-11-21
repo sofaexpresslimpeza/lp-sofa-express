@@ -9,14 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="stylesheet" href="src/styles/index.css">
     <title>Sofá Express | Sua empresa de limpeza de estofados</title>
 </head>
 
 <body>
     <section id="hero" class="hero alignment-section-helper">
-        <article class="hero-content">
-            <header class="hero-header desktop">
+        <article class="hero-content" data-aos="fade-right" data-aos-duration="900" data-aos-delay="100">
+            <header class="hero-header desktop" data-aos="fade-down" data-aos-delay="120">
                 <img src="public/logo-sofa-express.svg" alt="logo-sofa-express" />
                 <nav>
                     <ul>
@@ -33,23 +34,25 @@
                 </nav>
             </header>
             <main class="content">
-                <div class="promotion">
-                    <div>
+                <div class="promotion" role="button" tabindex="0" aria-pressed="false" data-aos="fade-up"
+                    data-aos-delay="150">
+                    <div class="promotion-icon">
                         <img src="src/assets/icons/gift.svg" alt="icone-de-presente" />
                     </div>
                     <article>
-                        <h3 class="title title-3">Agende e receba um prêmio!</h3>
-                        <p class="description description-2">1x lavagem grátis de almofada</p>
+                        <h3 class="title title-3 promotion-title">Clique e ganhe um prêmio!</h3>
+                        <p class="description description-2 promotion-description">Bloqueado</p>
                     </article>
                 </div>
-                <div class="titles">
+                <div class="titles" data-aos="fade-up" data-aos-delay="250">
                     <h1 class="title title-1">Manchas, odores e <strong>ácaros eliminados.</strong> Seu sofá novo e
                         pronto para uso em menos de 1 hora.</h1>
                     <p class="description description-1">Serviço de higienização profunda na Zona Leste: Atendimento
                         rápido e profissional. Oferecemos 7 dias de garantia e utilizamos produtos biodegradáveis
                         aprovados pela ANVISA.</p>
                 </div>
-                <button class="button button-blue" onclick="window.location.href='https://wa.me/5511957666283'">
+                <button class="button button-blue" onclick="window.location.href='https://wa.me/5511957666283'"
+                    data-aos="fade-up" data-aos-delay="350">
                     Fazer um orçamento
                     <div>
                         <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -60,14 +63,14 @@
                 </button>
             </main>
         </article>
-        <article class="hero-image">
-            <header class="hero-header mobile">
+        <article class="hero-image" data-aos="fade-left" data-aos-duration="900" data-aos-delay="200">
+            <header class="hero-header mobile" data-aos="zoom-in" data-aos-delay="250">
                 <img src="public/logo-sofa-express.svg" alt="logo-sofa-express" />
                 <button class="button-menu">
                     <img src="src/assets/icons/menu.svg" alt="icone-do-menu-hamburguer" />
                 </button>
             </header>
-            <nav>
+            <nav data-aos="fade-left" data-aos-delay="300">
                 <ul>
                     <li>
                         <a href="https://wa.me/5511957666283">
@@ -92,22 +95,22 @@
         </article>
     </section>
 
-    <section id="process" class="process alignment-section-helper">
-        <article class="process-titles">
+    <section id="process" class="process alignment-section-helper" data-aos="fade-up" data-aos-delay="100">
+        <article class="process-titles" data-aos="fade-up" data-aos-delay="150">
             <h1 class="title title-2">Entenda o <strong>processo completo</strong> que realizamos para seu sofá ficar
                 novo novamente</h1>
             <p class="description description-1">Nosso processo de limpeza de estofados é meticuloso e eficaz,
                 garantindo resultados excepcionais para o seu sofá.</p>
         </article>
-        <div class="process-carousel">
+        <div class="process-carousel" data-aos="fade-up" data-aos-delay="200">
             <div class="swiper process-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide process-card">
-                        <aside class="process-card-reference">
+                        <aside class="process-card-reference" data-aos="zoom-in" data-aos-delay="0">
                             <span>1</span>
                             <img src="src/assets/icons/inspect.svg" alt="icone-de-inspecao" />
                         </aside>
-                        <article class="process-card-content">
+                        <article class="process-card-content" data-aos="fade-up" data-aos-delay="100">
                             <h3 class="title title-3">Inspeção</h3>
                             <p class="description description-3">
                                 Avaliamos o estado do seu sofá para identificar manchas, odores e áreas que
@@ -116,11 +119,11 @@
                         </article>
                     </div>
                     <div class="swiper-slide process-card">
-                        <aside class="process-card-reference">
+                        <aside class="process-card-reference" data-aos="zoom-in" data-aos-delay="0">
                             <span>2</span>
                             <img src="src/assets/icons/aplication.svg" alt="icone-de-aplicacao" />
                         </aside>
-                        <article class="process-card-content">
+                        <article class="process-card-content" data-aos="fade-up" data-aos-delay="100">
                             <h3 class="title title-3">Aplicação</h3>
                             <p class="description description-3">
                                 Utilizamos produtos biodegradáveis e técnicas avançadas, garantindo uma limpeza
@@ -129,11 +132,11 @@
                         </article>
                     </div>
                     <div class="swiper-slide process-card">
-                        <aside class="process-card-reference">
+                        <aside class="process-card-reference" data-aos="zoom-in" data-aos-delay="0">
                             <span>3</span>
                             <img src="src/assets/icons/vacuum-cleaner.svg" alt="icone-de-vacuum-cleaner" />
                         </aside>
-                        <article class="process-card-content">
+                        <article class="process-card-content" data-aos="fade-up" data-aos-delay="100">
                             <h3 class="title title-3">Sucção</h3>
                             <p class="description description-3">
                                 Removemos a sujeira e os resíduos com equipamentos de sucção de alta potência,
@@ -142,11 +145,11 @@
                         </article>
                     </div>
                     <div class="swiper-slide process-card">
-                        <aside class="process-card-reference">
+                        <aside class="process-card-reference" data-aos="zoom-in" data-aos-delay="0">
                             <span>4</span>
                             <img src="src/assets/icons/check.svg" alt="icone-de-check" />
                         </aside>
-                        <article class="process-card-content">
+                        <article class="process-card-content" data-aos="fade-up" data-aos-delay="100">
                             <h3 class="title title-3">Finalização</h3>
                             <p class="description description-3">
                                 Realizamos uma inspeção final para garantir que seu sofá esteja impecável e
@@ -155,7 +158,7 @@
                         </article>
                     </div>
                 </div>
-                <div class="process-navigation">
+                <div class="process-navigation" data-aos="fade-up" data-aos-delay="250">
                     <button class="process-button process-button-prev" aria-label="Slide anterior">
                         <img src="src/assets/icons/arrow-left.svg" alt="icone-de-seta-para-esquerda" />
                     </button>
@@ -167,15 +170,17 @@
         </div>
     </section>
 
-    <section id="offer" class="offer alignment-section-helper">
-        <article class="offer-content">
+    <section id="offer" class="offer alignment-section-helper pattern-grid-squares" data-aos="fade-up"
+        data-aos-delay="120">
+        <article class="offer-content" data-aos="fade-right" data-aos-delay="150">
             <h2 class="title title-2">
                 Agende uma data para ter seu sofá como novo novamente
             </h2>
             <p class="description description-1">
                 Nossa equipe especializada entrega um serviço de excelência em tempo record!
             </p>
-            <button class="button button-white" onclick="window.location.href='https://wa.me/5511957666283'">
+            <button class="button button-white" onclick="window.location.href='https://wa.me/5511957666283'"
+                data-aos="zoom-in" data-aos-delay="250">
                 Agendar agora
                 <div>
                     <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -185,20 +190,20 @@
                 </div>
             </button>
         </article>
-        <aside class="offer-asset">
+        <aside class="offer-asset" data-aos="fade-left" data-aos-delay="200">
             <img src="src/assets/sofas/sofa-offer.png" alt="imagem-de-sofa" loading="lazy" />
         </aside>
     </section>
 
-    <section id="about" class="about">
+    <section id="about" class="about" data-aos="fade-up" data-aos-delay="120">
         <div class="bg"></div>
-        <main class="about-container alignment-section-helper">
+        <main class="about-container alignment-section-helper" data-aos="fade-up" data-aos-delay="150">
             <div class="about-content">
-                <aside class="about-carousel">
+                <aside class="about-carousel" data-aos="fade-right" data-aos-delay="150">
                     <div class="swiper about-swiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide about-card">
-                                <article class="badge">
+                                <article class="badge" data-aos="fade-up" data-aos-delay="50">
                                     <div class="assessment">
                                         <span>5.0</span>
                                     </div>
@@ -207,10 +212,10 @@
                                     </h3>
                                 </article>
                                 <img src="src/assets/sofas/assessment-01.jpg" alt="foto-de-uma-cama-limpa"
-                                    loading="lazy">
+                                    loading="lazy" data-aos="zoom-in" data-aos-delay="120">
                             </div>
                             <div class="swiper-slide about-card">
-                                <article class="badge">
+                                <article class="badge" data-aos="fade-up" data-aos-delay="50">
                                     <div class="assessment">
                                         <span>4.9</span>
                                     </div>
@@ -219,10 +224,10 @@
                                     </h3>
                                 </article>
                                 <img src="src/assets/sofas/assessment-02.jpg" alt="foto-de-uma-cadeira-limpa"
-                                    loading="lazy">
+                                    loading="lazy" data-aos="zoom-in" data-aos-delay="120">
                             </div>
                             <div class="swiper-slide about-card">
-                                <article class="badge">
+                                <article class="badge" data-aos="fade-up" data-aos-delay="50">
                                     <div class="assessment">
                                         <span>4.9</span>
                                     </div>
@@ -231,7 +236,7 @@
                                     </h3>
                                 </article>
                                 <img src="src/assets/sofas/assessment-03.jpg" alt="foto-de-uma-cadeira-limpa"
-                                    loading="lazy">
+                                    loading="lazy" data-aos="zoom-in" data-aos-delay="120">
                             </div>
                         </div>
                         <div class="about-navigation">
@@ -244,8 +249,8 @@
                         </div>
                     </div>
                 </aside>
-                <article class="about-texts">
-                    <div class="badge">
+                <article class="about-texts" data-aos="fade-left" data-aos-delay="200">
+                    <div class="badge" data-aos="zoom-in" data-aos-delay="250">
                         <h6 class="title title-4">
                             Mais de <strong>1200 clientes satisfeitos</strong>
                         </h6>
@@ -257,7 +262,8 @@
                         Seu sofá limpo e seco na Zona Leste. <strong>A Sofá Express</strong> oferece agendamento rápido,
                         atendimento em domicílio e secagem acelerada.
                     </p>
-                    <button class="button button-blue" onclick="window.location.href='https://wa.me/5511957666283'">
+                    <button class="button button-blue" onclick="window.location.href='https://wa.me/5511957666283'"
+                        data-aos="zoom-in" data-aos-delay="350">
                         Agendar agora
                         <div>
                             <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
@@ -269,28 +275,28 @@
                     </button>
                 </article>
             </div>
-            <div class="about-carousel-qualities">
+            <div class="about-carousel-qualities" data-aos="fade-up" data-aos-delay="150">
                 <div class="swiper about-qualities-swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide about-quality-card">
+                        <div class="swiper-slide about-quality-card" data-aos="fade-up" data-aos-delay="0">
                             <div class="badge">
                                 <h4 class="title title-3">+10</h4>
                             </div>
                             <h3 class="title title-3">Anos de experiência</h3>
                         </div>
-                        <div class="swiper-slide about-quality-card">
+                        <div class="swiper-slide about-quality-card" data-aos="fade-up" data-aos-delay="100">
                             <div class="badge">
                                 <h4 class="title title-3">100%</h4>
                             </div>
                             <h3 class="title title-3">Focado em qualidade</h3>
                         </div>
-                        <div class="swiper-slide about-quality-card">
+                        <div class="swiper-slide about-quality-card" data-aos="fade-up" data-aos-delay="200">
                             <div class="badge">
                                 <h4 class="title title-3">+1000</h4>
                             </div>
                             <h3 class="title title-3">Sofás resgatados</h3>
                         </div>
-                        <div class="swiper-slide about-quality-card">
+                        <div class="swiper-slide about-quality-card" data-aos="fade-up" data-aos-delay="300">
                             <div class="badge">
                                 <h4 class="title title-3">4.85/5</h4>
                             </div>
@@ -302,9 +308,8 @@
         </main>
     </section>
 
-
-    <section id="services" class="services alignment-section-helper">
-        <aside class="services-texts">
+    <section id="services" class="services alignment-section-helper" data-aos="fade-up" data-aos-delay="120">
+        <aside class="services-texts" data-aos="fade-right" data-aos-delay="150">
             <h1 class="title title-1">
                 Conheça todos os nossos <strong>serviços</strong>
             </h1>
@@ -312,12 +317,13 @@
                 Oferecemos soluções completas de limpeza e higienização para todos os tipos de estofados!
             </p>
         </aside>
-        <article class="services-carousel">
+        <article class="services-carousel" data-aos="fade-left" data-aos-delay="200">
             <div class="swiper services-swiper">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide services-card">
-                        <img src="src/assets/services/sofa-clean.jpg" alt="imagem-de-sofa-limpo" loading="lazy" />
-                        <article class="texts">
+                        <img src="src/assets/services/sofa-clean.jpg" alt="imagem-de-sofa-limpo" loading="lazy"
+                            data-aos="zoom-in" data-aos-delay="50" />
+                        <article class="texts" data-aos="fade-up" data-aos-delay="120">
                             <h3 class="title title-3">
                                 Sofás
                             </h3>
@@ -326,7 +332,8 @@
                                 do tecido.
                             </p>
                             <button class="button button-black mini"
-                                onclick="window.location.href='https://wa.me/5511957666283'">
+                                onclick="window.location.href='https://wa.me/5511957666283'" data-aos="zoom-in"
+                                data-aos-delay="200">
                                 Higienizar agora
                                 <div>
                                     <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
@@ -340,8 +347,8 @@
                     </div>
                     <div class="swiper-slide services-card">
                         <img src="src/assets/services/armchair-clean.jpg" alt="imagem-de-uma-poltrona-limpa"
-                            loading="lazy" />
-                        <article class="texts">
+                            loading="lazy" data-aos="zoom-in" data-aos-delay="50" />
+                        <article class="texts" data-aos="fade-up" data-aos-delay="120">
                             <h3 class="title title-3">
                                 Cadeiras e poltronas
                             </h3>
@@ -349,7 +356,8 @@
                                 Remove manchas de uso, poeira e odores de peças de uso diário, revitalizando as cores.
                             </p>
                             <button class="button button-black mini"
-                                onclick="window.location.href='https://wa.me/5511957666283'">
+                                onclick="window.location.href='https://wa.me/5511957666283'" data-aos="zoom-in"
+                                data-aos-delay="200">
                                 Higienizar agora
                                 <div>
                                     <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
@@ -362,8 +370,9 @@
                         </article>
                     </div>
                     <div class="swiper-slide services-card">
-                        <img src="src/assets/services/bed-clean.jpg" alt="imagem-de-colchao-limpo" loading="lazy" />
-                        <article class="texts">
+                        <img src="src/assets/services/bed-clean.jpg" alt="imagem-de-colchao-limpo" loading="lazy"
+                            data-aos="zoom-in" data-aos-delay="50" />
+                        <article class="texts" data-aos="fade-up" data-aos-delay="120">
                             <h3 class="title title-3">
                                 Colchões e cabeceiras
                             </h3>
@@ -371,7 +380,8 @@
                                 Combate ácaros, fungos e alérgenos, garantindo um sono mais limpo e saudável.
                             </p>
                             <button class="button button-black mini"
-                                onclick="window.location.href='https://wa.me/5511957666283'">
+                                onclick="window.location.href='https://wa.me/5511957666283'" data-aos="zoom-in"
+                                data-aos-delay="200">
                                 Higienizar agora
                                 <div>
                                     <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
@@ -384,8 +394,9 @@
                         </article>
                     </div>
                     <div class="swiper-slide services-card">
-                        <img src="src/assets/services/carpet-clean.png" alt="imagem-de-tapete-limpo" loading="lazy" />
-                        <article class="texts">
+                        <img src="src/assets/services/carpet-clean.png" alt="imagem-de-tapete-limpo" loading="lazy"
+                            data-aos="zoom-in" data-aos-delay="50" />
+                        <article class="texts" data-aos="fade-up" data-aos-delay="120">
                             <h3 class="title title-3">
                                 Tapetes e carpetes
                             </h3>
@@ -394,7 +405,8 @@
                                 odores.
                             </p>
                             <button class="button button-black mini"
-                                onclick="window.location.href='https://wa.me/5511957666283'">
+                                onclick="window.location.href='https://wa.me/5511957666283'" data-aos="zoom-in"
+                                data-aos-delay="200">
                                 Higienizar agora
                                 <div>
                                     <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
@@ -408,8 +420,8 @@
                     </div>
                     <div class="swiper-slide services-card">
                         <img src="src/assets/services/upholstered-clean.png" alt="imagem-de-estofado-de-carro-limpo"
-                            loading="lazy" />
-                        <article class="texts">
+                            loading="lazy" data-aos="zoom-in" data-aos-delay="50" />
+                        <article class="texts" data-aos="fade-up" data-aos-delay="120">
                             <h3 class="title title-3">
                                 Estofados automotivos
                             </h3>
@@ -418,7 +430,8 @@
                                 indesejados.
                             </p>
                             <button class="button button-black mini"
-                                onclick="window.location.href='https://wa.me/5511957666283'">
+                                onclick="window.location.href='https://wa.me/5511957666283'" data-aos="zoom-in"
+                                data-aos-delay="200">
                                 Higienizar agora
                                 <div>
                                     <svg width="27" height="27" viewBox="0 0 27 27" fill="none"
@@ -431,7 +444,7 @@
                         </article>
                     </div>
                 </div>
-                <div class="navigation-container">
+                <div class="navigation-container" data-aos="fade-up" data-aos-delay="260">
                     <p class="description description-2">
                         Todos os nossos <strong>serviços são feitos por profissionais</strong>
                     </p>
@@ -448,15 +461,16 @@
         </article>
     </section>
 
-    <section id="automotive" class="automotive alignment-section-helper">
-        <article class="automotive-texts">
+    <section id="automotive" class="automotive alignment-section-helper" data-aos="fade-up" data-aos-delay="120">
+        <article class="automotive-texts" data-aos="fade-right" data-aos-delay="160">
             <h1 class="title title-1">
                 Limpeza de qualidade no estofado do <strong>seu carro</strong>
             </h1>
             <p class="description description-1">
                 Cansado daquela sujeira que você limpa, limpa e nunca consegue tirar? A gente resolve isso para você!
             </p>
-            <button class="button button-blue" onclick="window.location.href='https://wa.me/5511957666283'">
+            <button class="button button-blue" onclick="window.location.href='https://wa.me/5511957666283'"
+                data-aos="zoom-in" data-aos-delay="260">
                 Fazer um orçamento
                 <div>
                     <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -466,16 +480,16 @@
                 </div>
             </button>
         </article>
-        <div class="automotive-asset">
-            <img src="src/assets/services/car-clean.jpg" alt="assento-de-carro-sendo-limpo" loading="
-            lazy" />
+        <div class="automotive-asset" data-aos="fade-left" data-aos-delay="220">
+            <img src="src/assets/services/car-clean.jpg" alt="assento-de-carro-sendo-limpo" loading="lazy"
+                data-aos="zoom-in" data-aos-delay="280" />
         </div>
     </section>
 
-    <section id="promo" class="promo">
+    <section id="promo" class="promo" data-aos="fade-up" data-aos-delay="140">
         <div class="bg"></div>
-        <main class="promo-container">
-            <article class="promo-texts">
+        <main class="promo-container" data-aos="fade-up" data-aos-delay="170">
+            <article class="promo-texts" data-aos="fade-right" data-aos-delay="180">
                 <h1 class="title title-1">
                     <strong>NOVIVADE!</strong> Seu sofá limpo todo mês sem dor de cabeça
                 </h1>
@@ -488,7 +502,8 @@
                 <p class="description description-1">
                     Promoção exclusiva para quem valoriza conforto e Higiene, se você valoriza, clique no botão abaixo
                 </p>
-                <button class="button button-black" onclick="window.location.href='https://wa.me/5511957666283'">
+                <button class="button button-black" onclick="window.location.href='https://wa.me/5511957666283'"
+                    data-aos="zoom-in" data-aos-delay="260">
                     Garantir promoção
                     <div>
                         <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -498,18 +513,19 @@
                     </div>
                 </button>
             </article>
-            <aside class="promo-asset">
+            <aside class="promo-asset" data-aos="fade-left" data-aos-delay="220">
                 <div class="price">
                     <p class="description description-1">A partir de</p>
                     <h1 class="title title-1">R$100<b>/mês</b></h1>
                 </div>
-                <img src="src/assets/sofas/sofa-promo.png" alt="sofa-metade-limpo-metade-sujo" loading="lazy">
+                <img src="src/assets/sofas/sofa-promo.png" alt="sofa-metade-limpo-metade-sujo" loading="lazy"
+                    data-aos="zoom-in" data-aos-delay="280">
             </aside>
         </main>
     </section>
 
-    <section id="testimonials" class="testimonials alignment-section-helper">
-        <article class="testimonials-texts">
+    <section id="testimonials" class="testimonials alignment-section-helper" data-aos="fade-up" data-aos-delay="140">
+        <article class="testimonials-texts" data-aos="fade-up" data-aos-delay="160">
             <h1 class="title title-1">
                 Quem conhece, <strong>indica!</strong>
             </h1>
@@ -517,9 +533,9 @@
                 Qualidade acima da média, os clientes aprovam 100%!
             </p>
         </article>
-        <main class="testimonials-carousel">
-            <div class="testimonials-masonry">
-                <article class="testimonial-card">
+        <main class="testimonials-carousel" data-aos="fade-up" data-aos-delay="190">
+            <div class="testimonials-masonry" data-aos="fade-up" data-aos-delay="200">
+                <article class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
                     <div class="stars">
                         <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
                         <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
@@ -537,7 +553,7 @@
                         </div>
                     </aside>
                 </article>
-                <article class="testimonial-card">
+                <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="stars">
                         <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
                         <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
@@ -556,7 +572,7 @@
                         </div>
                     </aside>
                 </article>
-                <article class="testimonial-card">
+                <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="stars">
                         <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
                         <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
@@ -576,7 +592,7 @@
                         </div>
                     </aside>
                 </article>
-                <article class="testimonial-card">
+                <article class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="stars">
                         <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
                         <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
@@ -595,7 +611,7 @@
                         </div>
                     </aside>
                 </article>
-                <article class="testimonial-card">
+                <article class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="stars">
                         <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
                         <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
@@ -614,7 +630,7 @@
                         </div>
                     </aside>
                 </article>
-                <article class="testimonial-card">
+                <article class="testimonial-card" data-aos="fade-up" data-aos-delay="500">
                     <div class="stars">
                         <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
                         <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
@@ -634,10 +650,10 @@
                     </aside>
                 </article>
             </div>
-            <div class="swiper testimonials-swiper">
+            <div class="swiper testimonials-swiper" data-aos="fade-up" data-aos-delay="220">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
-                        <article class="testimonial-card">
+                        <article class="testimonial-card" data-aos="fade-up" data-aos-delay="0">
                             <div class="stars">
                                 <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
                                 <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
@@ -658,7 +674,7 @@
                         </article>
                     </div>
                     <div class="swiper-slide">
-                        <article class="testimonial-card">
+                        <article class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
                             <div class="stars">
                                 <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
                                 <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
@@ -680,7 +696,7 @@
                         </article>
                     </div>
                     <div class="swiper-slide">
-                        <article class="testimonial-card">
+                        <article class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
                             <div class="stars">
                                 <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
                                 <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
@@ -702,7 +718,7 @@
                         </article>
                     </div>
                     <div class="swiper-slide">
-                        <article class="testimonial-card">
+                        <article class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
                             <div class="stars">
                                 <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
                                 <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
@@ -724,7 +740,7 @@
                         </article>
                     </div>
                     <div class="swiper-slide">
-                        <article class="testimonial-card">
+                        <article class="testimonial-card" data-aos="fade-up" data-aos-delay="400">
                             <div class="stars">
                                 <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
                                 <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
@@ -745,7 +761,7 @@
                         </article>
                     </div>
                     <div class="swiper-slide">
-                        <article class="testimonial-card">
+                        <article class="testimonial-card" data-aos="fade-up" data-aos-delay="500">
                             <div class="stars">
                                 <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
                                 <img src="src/assets/icons/star.svg" alt="icone-de-estrela" />
@@ -766,7 +782,7 @@
                         </article>
                     </div>
                 </div>
-                <article class="navigation-container">
+                <article class="navigation-container" data-aos="fade-up" data-aos-delay="260">
                     <p class="description description-2">
                         Veja mais avaliações de nossos clientes satisfeitos!
                     </p>
@@ -783,14 +799,15 @@
         </main>
     </section>
 
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer" data-aos="fade-up" data-aos-delay="150">
         <div class="bg"></div>
-        <main class="footer-container">
-            <article class="footer-texts">
+        <main class="footer-container" data-aos="fade-up" data-aos-delay="180">
+            <article class="footer-texts" data-aos="fade-right" data-aos-delay="200">
                 <h1 class="title title-1">
                     Não deixe seu sofá estragar, entre em contato agora!
                 </h1>
-                <button class="button button-black" onclick="window.location.href='https://wa.me/5511957666283'">
+                <button class="button button-black" onclick="window.location.href='https://wa.me/5511957666283'"
+                    data-aos="zoom-in" data-aos-delay="280">
                     Agendar agora
                     <div>
                         <svg width="27" height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -816,7 +833,8 @@
                         background-color: #000000;
                         cursor: pointer;
                     ">
-                    <a href="https://www.alephsramosdev.com.br?utm_source=sofa-express&utm_medium=footer&utm_campaign=freelancer" target="_blank" rel="noopener noreferrer" style="
+                    <a href="https://www.alephsramosdev.com.br?utm_source=sofa-express&utm_medium=footer&utm_campaign=freelancer"
+                        target="_blank" rel="noopener noreferrer" style="
                             display: flex;
                             align-items: center;
                             gap: 8px;
@@ -828,7 +846,8 @@
                             font-size: 16px;
                             line-height: 100%;
                         ">
-                        <img src="https://www.alephsramosdev.com.br/alephsramosdev-icon.png" alt="project-by-alephsramosdev" loading="eager" style="
+                        <img src="https://www.alephsramosdev.com.br/alephsramosdev-icon.png"
+                            alt="project-by-alephsramosdev" loading="eager" style="
                                 width: 26px;
                                 height: 26px;
                                 object-fit: contain;
@@ -841,6 +860,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="src/scripts/main.js"></script>
 </body>
 
