@@ -312,6 +312,7 @@
             @media (max-width: 768px) {
                 height: 70%;
                 top: 60%;
+                animation: sofa-hero-shine-soft 6s ease-in-out infinite;
             }
         }
 
@@ -508,5 +509,17 @@
 
     50% {
         filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.7)) drop-shadow(0 0 45px rgba(255, 255, 255, 0.35));
+    }
+}
+
+@keyframes sofa-hero-shine-soft {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 0 transparent);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.5)) drop-shadow(0 0 24px rgba(255, 255, 255, 0.22));
     }
 }

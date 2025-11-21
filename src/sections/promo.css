@@ -151,6 +151,7 @@
 
                 @media (max-width: 768px) {
                     height: 160px;
+                    animation: sofa-promo-shine-soft 6s ease-in-out infinite;
                 }
             }
         }
@@ -166,5 +167,17 @@
 
     50% {
         filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.6)) drop-shadow(0 0 40px rgba(255, 255, 255, 0.4));
+    }
+}
+
+@keyframes sofa-promo-shine-soft {
+
+    0%,
+    100% {
+        filter: drop-shadow(0 0 0 transparent);
+    }
+
+    50% {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.4)) drop-shadow(0 0 18px rgba(255, 255, 255, 0.18));
     }
 }
