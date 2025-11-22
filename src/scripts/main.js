@@ -324,3 +324,66 @@ const registerServiceWorker = () => {
 
 registerServiceWorker();
 
+const floatingHeader = document.querySelector('.floating-header');
+let scrollTimeout;
+let expandTimeout;
+let lastScrollY = window.scrollY;
+let isScrolling = false;
+
+const showFloatingHeader = () => {
+    if (floatingHeader) {
+        floatingHeader.classList.add('is-visible');
+    }
+};
+
+const hideFloatingHeader = () => {
+    if (floatingHeader) {
+        floatingHeader.classList.remove('is-visible');
+        floatingHeader.classList.remove('is-expanded');
+    }
+};
+
+const expandFloatingHeader = () => {
+    if (floatingHeader && !isScrolling) {
+        floatingHeader.classList.add('is-expanded');
+    }
+};
+
+const collapseFloatingHeader = () => {
+    if (floatingHeader) {
+        floatingHeader.classList.remove('is-expanded');
+    }
+};
+
+const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > 200) {
+        showFloatingHeader();
+        isScrolling = true;
+        collapseFloatingHeader();
+
+        clearTimeout(scrollTimeout);
+        clearTimeout(expandTimeout);
+
+        scrollTimeout = setTimeout(() => {
+            isScrolling = false;
+
+            expandTimeout = setTimeout(() => {
+                if (!isScrolling && currentScrollY > 200) {
+                    expandFloatingHeader();
+                }
+            }, 1000);
+        }, 150);
+    } else {
+        hideFloatingHeader();
+        isScrolling = false;
+        clearTimeout(scrollTimeout);
+        clearTimeout(expandTimeout);
+    }
+
+    lastScrollY = currentScrollY;
+};
+
+window.addEventListener('scroll', handleScroll, { passive: true });
+
