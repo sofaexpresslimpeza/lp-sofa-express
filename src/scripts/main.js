@@ -387,3 +387,33 @@ const handleScroll = () => {
 
 window.addEventListener('scroll', handleScroll, { passive: true });
 
+const faqItems = document.querySelectorAll('.faq-item');
+
+if (faqItems.length > 0) {
+    faqItems.forEach((item) => {
+        item.addEventListener('click', (e) => {
+            const isOpen = item.open;
+
+            faqItems.forEach((otherItem) => {
+                if (otherItem !== item && otherItem.open) {
+                    otherItem.open = false;
+                }
+            });
+
+            if (!isOpen) {
+                item.open = true;
+            }
+        });
+
+        item.addEventListener('toggle', () => {
+            if (item.open) {
+                faqItems.forEach((otherItem) => {
+                    if (otherItem !== item && otherItem.open) {
+                        otherItem.open = false;
+                    }
+                });
+            }
+        });
+    });
+}
+
