@@ -1134,10 +1134,7 @@
             window.gtag = window.gtag || function () { dataLayer.push(arguments); };
 
             document.querySelector('.whatsapp-float').addEventListener('click', function () {
-                // Conversão do Google Ads: "Clique WhatsApp - Principal"
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-17707360608/RYrHCIvpo-ccEODCw_tB'
-                });
+
                 // Evento para o GTM (opcional, útil para relatórios)
                 dataLayer.push({ event: 'whatsapp_click', click_location: 'botao_flutuante' });
             });
